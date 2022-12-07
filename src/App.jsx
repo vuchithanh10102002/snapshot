@@ -2,6 +2,7 @@ import "./App.css";
 import Header from "./SnapShot/Component/Header";
 import Item from "./SnapShot/Component/Item";
 import { Routes, Route } from 'react-router-dom' 
+import ItemSearch from "./SnapShot/Component/ItemSearch";
 
 function App() {
   
@@ -24,6 +25,10 @@ function App() {
         <Route 
         path="/food"
         element={<Item searchTerm='food'/>}
+        />
+        <Route 
+          path="/search/:key"
+          element={<ItemSearch searchTerm=''/>}
         />
       </Routes>
       
